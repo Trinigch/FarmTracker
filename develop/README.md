@@ -1,14 +1,14 @@
-# Wedding App
-A full‑stack RSVP application for wedding guests, built with React, Express, and PostgreSQL. Guests can confirm attendance to the ceremony and optional trips (Iguazú Falls and Fitz Roy), and view who’s coming.
+FarmTracker
+A full-stack farm management application to track animals, record health events, and maintain medical histories, built with React, Express, and Oracle Database. Users can register animals, log illnesses and deaths, and filter medical records.
 
 Technologies
-Front‑end: React, Vite, React Router, JSX, React Hooks, styled‑components
+Front-end: React, Vite, React Router, JSX, React Hooks, styled-components
 
-Back‑end: Node.js, Express, Sequelize ORM
+Back-end: Node.js, Express, Sequelize ORM (configured for Oracle Database)
 
-Database: PostgreSQL
+Database: Oracle Database
 
-Deployment: Netlify (front‑end), Render or Heroku (API), Heroku Postgres
+Deployment: (Add your deployment platforms, e.g., Render, Heroku, Netlify)
 
 Installation
 Clone the repository and install dependencies for both client and server:
@@ -17,13 +17,13 @@ bash
 Copiar
 Editar
 # Clone the repo
-git clone git@github.com:Trinigch/Wedding.git
+git clone git@github.com:Trinigch/FarmTracker.git
 
-# Front‑end
-cd WeddingApp
+# Front-end
+cd FarmTracker/client
 npm install
 
-# Back‑end
+# Back-end
 cd ../server
 npm install
 Create a .env file in the server/ directory with these variables:
@@ -31,40 +31,51 @@ Create a .env file in the server/ directory with these variables:
 env
 Copiar
 Editar
-DATABASE_URL=postgres://<USER>:<PASSWORD>@<HOST>:<PORT>/<DB_NAME>
-VITE_GOOGLE_MAPS_API_KEY=<YOUR_GOOGLE_MAPS_API_KEY>
+DB_USER=<your_oracle_username>
+DB_PASSWORD=<your_oracle_password>
+DB_CONNECTION_STRING=<your_oracle_connection_string>
+# Add any other env variables your backend requires
 Usage
 Development
+In one terminal, start the front-end:
+
 bash
 Copiar
 Editar
-# In one terminal, start the front‑end
-cd WeddingApp
+cd FarmTracker/client
 npm run dev
+In another terminal, start the API server:
 
-# In another terminal, start the API server
-cd server
+bash
+Copiar
+Editar
+cd FarmTracker/server
 npm run dev
 Production
+Build the front-end:
+
 bash
 Copiar
 Editar
-# Build front‑end
-cd WeddingApp
+cd FarmTracker/client
 npm run build
+Start the back-end:
 
-# Start back‑end
-cd server
+bash
+Copiar
+Editar
+cd FarmTracker/server
 npm start
 Links
-GitHub Repository: https://github.com/Trinigch/Wedding
+GitHub Repository: https://github.com/Trinigch/FarmTracker
 
-Front‑end Live Demo: https://stunning-flan-6d41aa.netlify.app
+(Add front-end live demo link if deployed)
 
-API Endpoint: https://your-api-url.onrender.com
+(Add API endpoint if deployed)
 
 Credits
 Developer: Trinidad Peterson — GitHub: Trinigch
 
 License
 This project is licensed under the MIT License. See the full text in the LICENSE file.
+
