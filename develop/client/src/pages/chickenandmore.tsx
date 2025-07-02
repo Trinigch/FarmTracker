@@ -15,10 +15,12 @@ function AboutFarm() {
   
         <CardsRow>
           <CardContainer>
-            <SummaryCard title="Total of animals" value="28" icon="🐔🐓🦃 " />
+            <SummaryCard title="Chicks" value="28" icon="🐔 " />
+             <SummaryCard title="duckies" value="1" icon="🦆 " />
+                <SummaryCard title="Turcky" value="1" icon="🦃 " />
           </CardContainer>
           <CardContainer>
-            <SummaryCard title="new born" value="0" icon="👶" />
+            <SummaryCard title="new born" value="0" icon="🐤" />
           </CardContainer>
           <CardContainer>
             <SummaryCard title="sicks" value="0" icon="🩺" />

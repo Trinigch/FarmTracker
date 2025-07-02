@@ -76,11 +76,43 @@ function AnimalRecord() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async(e: React.FormEvent) => {
     e.preventDefault();
     console.log("Submitted data:", formData);
     // TODO: Send to backend
-  };
+     try {
+    const response =  await fetch("http://localhost:3001/api/animals", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      alert("Animal registered successfully! 🎉");
+      // Reset form
+      setFormData({
+        nombre: "",
+        especie: "",
+        fecha_nacimiento: "",
+        padre_id: "",
+        madre_id: "",
+        estado: "alive",
+        observaciones: "",
+      });
+    } else {
+      alert("Error: " + data.error);
+    }
+  } catch (err) {
+    console.error(err);
+    alert("An error occurred while sending the data.");
+  }
+};
+
+  
 
   return (
     <FormContainer>

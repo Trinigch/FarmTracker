@@ -7,15 +7,15 @@ function AboutFarm() {
   return (
     <Container>
       
-       <Title>{"Sheep 🐑"}</Title>
+       <Title>{"Sheep🐏 "}</Title>
        <ImageContainer background={sheepImage}>
     
         <CardsRow>
           <CardContainer>
-            <SummaryCard title="Total of animals" value="30" icon="🐑" />
+            <SummaryCard title="Total of Sheeps" value="30" icon="🐏" />
           </CardContainer>
           <CardContainer>
-            <SummaryCard title="new born" value="15" icon="👶" />
+            <SummaryCard title="new born" value="15" icon="🐑 " />
           </CardContainer>
           <CardContainer>
             <SummaryCard title="sicks" value="1" icon="🩺" />
